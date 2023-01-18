@@ -1,0 +1,59 @@
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cinzel:wght@400;500&family=Diplomata+SC&family=Jost:wght@400;500;700&family=Michroma&family=Noto+Nastaliq+Urdu&family=Oswald:wght@200&family=Poor+Story&family=Poppins&family=Raleway:wght@200;600;700&family=Ubuntu:wght@700&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+  }
+
+  h1 {
+      font-family: 'ubuntu', sans-serif;
+      letter-spacing: 5px;
+  }
+
+  #clock {
+      padding: 25px;
+      border-radius: 5px;
+      border: 5px solid;
+      border-image: linear-gradient(45deg, purple, orange, green) 1;
+      position: relative;
+      background-color: black;
+  }
+
+  .time {
+      font-size: 50px;
+      margin: 0px 8px;
+      font-weight: bolder;
+      font-family: 'ubuntu', sans-serif;
+      background: linear-gradient(to bottom right,
+              purple, orange, green);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  #clock::after {
+      content: "";
+      position: absolute;
+      inset: -.500em;
+      background: linear-gradient(to bottom right,
+              purple, orange, green);
+      filter: blur(20px);
+      z-index: -1;
+  }
+
+  @media screen and (max-width: 480px) {
+      .time {
+          font-size: 35px;
+          margin: 0px 4px;
+      }
+  }
